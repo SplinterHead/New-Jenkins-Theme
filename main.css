@@ -1,0 +1,248 @@
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: #4D739A;
+}
+
+#header {
+	background-color: #205081;
+}
+
+#breadcrumbBar {
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+    height: 27px !important;
+}
+
+li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:hover, #right-top-nav .smallfont:hover {
+	background-color: #205081 !important;
+}
+
+#breadcrumbBar, .first-of-type, .yuimenuitem, .top-sticker-inner {
+	background-color: #4D739A;
+}
+
+.top-sticker-inner a {
+	color: white !important;
+	text-decoration: none;
+}
+
+#right-top-nav .smallfont {
+	padding-left: 7px;
+	padding-right: 6px;
+}
+
+#side-panel {
+	min-height: 100vh;
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #DDD;
+	-webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
+}
+
+#side-panel .pane-frame:hover {
+	border: 0px !important;
+}
+
+.mouseover, #breadcrumbs {
+	border: 0px !important;
+}
+
+#tasks, .pane a {
+	padding-left: 15px;
+}
+
+.build-row {
+	height: 30px !important;
+}
+
+.pane-frame {
+	width: 100%;
+	border: 0px;
+}
+
+.pane-header {
+	background-color: #BBB;
+}
+
+#main-panel {
+	height: 100vh;
+	/*background-color: #EEE;*/
+}
+
+#description {
+	font-style: italic;
+	font-weight:bold;
+}
+
+.dashboard a {
+	padding: 0;
+}
+
+footer {
+	display: none;
+}
+
+/* Replacement Icons*/
+#menuSelector {
+	content: url(img/arrow_down_white.png);
+	width: 14px !important;
+	height: 13px !important;
+}
+
+.children {
+	content: url(img/arrow_right_white.png);
+	padding-top: 6px;
+	padding-bottom: 4px;
+}
+
+.icon-new-package {
+	content: url(img/add.png);
+}
+
+.icon-terminal {
+	content: url(img/terminal.png);
+}
+
+.icon-document-properties {
+	content: url(img/white_list.png);
+}
+
+.icon-user {
+	content: url(img/group.png);
+}
+
+.icon-notepad {
+	content: url(img/history.png);
+}
+
+.icon-gear {
+	content: url(img/gear.png);
+}
+
+.icon-edit-delete {
+	content: url(img/close.png);
+}
+
+.icon-search {
+	content: url(img/zoom.png);
+}
+
+.icon-up, .icon-previous {
+	content: url(img/arrow.png);
+}
+
+.icon-folder {
+	content: url(img/folder.png);
+}
+
+.icon-clipboard {
+	content: url(img/clipboard.png);
+}
+
+.icon-setting {
+	content: url(img/technical_wrench.png);
+}
+
+.icon-setting {
+	content: url(img/technical_wrench.png);
+}
+
+.icon-hourglass {
+	content: url(img/clock.png);
+}
+
+.icon-stop {
+	content: url(img/cross.png)
+}
+
+.icon-secure {
+	content: url(img/lock_closed.png)
+}
+
+.icon-refresh {
+	content: url(img/repeat.png)
+}
+
+.icon-monitor {
+	content: url(img/network_monitor.png)
+}
+
+.icon-plugin {
+	content: url(img/solution.png)
+}
+
+.icon-computer {
+	content: url(img/monitor.png)
+}
+
+/* Some icons do not have direct references
+   we need to access these by other means */
+#description-link img {
+	content: url(img/handwritten_message.png);
+	width: 28px !important;
+    height: 24px !important;
+    padding-right: 3px;
+}
+
+.task a[href*="scan-on-demand"] img, 
+.task a[href*="failure-cause-management"] img {
+	content: url(img/lightbulb.png);
+}
+
+.task a[href*="scmPollLog"] img, .icon-orange-square {
+	content: url(img/shared_folder.png);
+}
+
+.task a[href*="credential-store"] img,
+img[src*="credentials.png"] {
+	content: url(img/key.png);
+}
+
+.task a[href*="jobConfigHistory"] img {
+	content: url(img/backup.png);
+}
+
+.task a[href*="newView"] img {
+	content: url(img/folder_add.png);
+}
+
+a[href*="configOutput?type=xml"] img {
+	content: url(img/file_format_xml.png);
+	width: 24px !important;
+    height: 24px !important;
+}
+
+img[src*="help.png"] {
+	content: url(img/help.png);
+}
+
+/* Weather Icon Reaplacement */
+.icon-health-00to19 {
+	content: url(img/weather/lightning.png);
+}
+.icon-health-20to39 {
+	content: url(img/weather/rain.png);
+}
+.icon-health-40to59 {
+	content: url(img/weather/cloud.png);
+}
+.icon-health-60to79 {
+	content: url(img/weather/clowdy.png);
+}
+.icon-health-80plus {
+	content: url(img/weather/sun.png);
+}
+
+/* Job status icons */
+.icon-blue {
+	content: url(img/tick.png)
+}
+.icon-red {
+	content: url(img/cross.png)
+}

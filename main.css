@@ -1,13 +1,24 @@
+#header, li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:hover, #right-top-nav .smallfont:hover {
+	background-color: #205081 !important;
+	color: white !important;
+}
+
+#breadcrumbBar, .first-of-type, .yuimenuitem, .top-sticker-inner, .pane-header, .build-pipeline, .progress-bar-done {
+	background-color: #4D739A !important;
+	color: white !important;
+}
+
+#search-box {
+	background-image: url(img/zoom.png);
+    background-size: 16px;
+}
+
 a {
 	text-decoration: none;
 }
 
 a:visited {
 	color: #4D739A;
-}
-
-#header {
-	background-color: #205081;
 }
 
 #breadcrumbBar {
@@ -17,15 +28,7 @@ a:visited {
     height: 27px !important;
 }
 
-li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:hover, #right-top-nav .smallfont:hover {
-	background-color: #205081 !important;
-}
-
-#breadcrumbBar, .first-of-type, .yuimenuitem, .top-sticker-inner {
-	background-color: #4D739A;
-}
-
-.top-sticker-inner a {
+.top-sticker-inner a, .pane-header, .pane-header a {
 	color: white !important;
 	text-decoration: none;
 }
@@ -37,8 +40,9 @@ li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:h
 
 #side-panel {
 	min-height: 100vh;
-	padding-left: 0;
-	padding-right: 0;
+	min-width: 360px;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 	background-color: #DDD;
 	-webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
     -moz-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
@@ -53,7 +57,7 @@ li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:h
 	border: 0px !important;
 }
 
-#tasks, .pane a {
+#tasks, .model-link {
 	padding-left: 15px;
 }
 
@@ -67,12 +71,16 @@ li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:h
 }
 
 .pane-header {
-	background-color: #BBB;
+	border-radius: 0;
+}
+
+.progress-bar {
+	border-color: #4D739A !important;
+
 }
 
 #main-panel {
 	height: 100vh;
-	/*background-color: #EEE;*/
 }
 
 #description {
@@ -84,114 +92,130 @@ li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:h
 	padding: 0;
 }
 
+.console-output, #spinner {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+}
+
+.console-output a {
+	color: #DDD;
+}
+
+#build-pipeline-plugin-content {
+	padding: 0px !important;
+}
+
+#build-pipeline-plugin-content #icon-bar, .revision-cell {
+	display: none;
+}
+
+.warning { 
+	background-image: url(img/risk.png);
+    background-size: 24px;
+    padding-left: 30px;
+}
+
+form p.info {
+	background-image: url(img/arrow-_right.png);
+    background-size: 20px;
+    padding-left: 30px;
+
+}
+
+table #pipelines {
+	padding-right: 40px !important;
+}
+
+div[id*="portlet"] {
+	background-color: #4D739A !important;
+	border-color: #4D739A !important;
+	color: white !important;
+}
+
+table[id*="portlet"] {
+	border-color: #4D739A !important;
+}
+
+table[id*="portlet"] td {
+	padding: 0px !important;
+}
+
 footer {
 	display: none;
 }
 
-/* Replacement Icons*/
+/* Hidden Elements */
 #menuSelector {
-	content: url(img/arrow_down_white.png);
-	width: 14px !important;
-	height: 13px !important;
+	display: none;
 }
 
+/* Replacement Icons*/
 .children {
 	content: url(img/arrow_right_white.png);
 	padding-top: 6px;
 	padding-bottom: 4px;
 }
 
-.icon-new-package {
-	content: url(img/add.png);
-}
+.icon-clock { content: url(img/play.png); }
 
-.icon-terminal {
-	content: url(img/terminal.png);
-}
+.icon-new-package { content: url(img/add.png); }
 
-.icon-document-properties {
-	content: url(img/white_list.png);
-}
+.icon-terminal { content: url(img/terminal.png); }
 
-.icon-user {
-	content: url(img/group.png);
-}
+.icon-document-properties { content: url(img/white_list.png); }
 
-.icon-notepad {
-	content: url(img/history.png);
-}
+.icon-user { content: url(img/group.png); }
+ 
+.icon-notepad { content: url(img/history.png); }
 
-.icon-gear {
-	content: url(img/gear.png);
-}
+.icon-gear { content: url(img/gear.png); }
 
-.icon-edit-delete {
-	content: url(img/close.png);
-}
+.icon-edit-delete { content: url(img/close.png); }
 
-.icon-search {
-	content: url(img/zoom.png);
-}
+.icon-search { content: url(img/zoom.png); }
 
-.icon-up, .icon-previous {
-	content: url(img/arrow.png);
-}
+.icon-up, .icon-previous { content: url(img/arrow-_left.png); }
 
-.icon-folder {
-	content: url(img/folder.png);
-}
+.icon-folder { content: url(img/folder.png); }
 
-.icon-clipboard {
-	content: url(img/clipboard.png);
-}
+.icon-clipboard { content: url(img/clipboard.png); }
 
-.icon-setting {
-	content: url(img/technical_wrench.png);
-}
+.icon-setting { content: url(img/technical_wrench.png); }
 
-.icon-setting {
-	content: url(img/technical_wrench.png);
-}
+.icon-hourglass { content: url(img/clock.png); }
 
-.icon-hourglass {
-	content: url(img/clock.png);
-}
+.icon-stop { content: url(img/cross.png) }
 
-.icon-stop {
-	content: url(img/cross.png)
-}
+.icon-secure { content: url(img/lock_closed.png) }
 
-.icon-secure {
-	content: url(img/lock_closed.png)
-}
+.icon-refresh { content: url(img/repeat.png) }
 
-.icon-refresh {
-	content: url(img/repeat.png)
-}
+.icon-monitor { content: url(img/network_monitor.png) }
 
-.icon-monitor {
-	content: url(img/network_monitor.png)
-}
+.icon-plugin { content: url(img/solution.png) }
 
-.icon-plugin {
-	content: url(img/solution.png)
-}
+.icon-computer { content: url(img/monitor.png) }
 
-.icon-computer {
-	content: url(img/monitor.png)
-}
+.icon-save { content: url(img/diskette.png); }
+
+.icon-document { content: url(img/document.png); }
 
 /* Some icons do not have direct references
    we need to access these by other means */
 #description-link img {
-	content: url(img/handwritten_message.png);
+	content: url(img/blog.png);
 	width: 28px !important;
     height: 24px !important;
     padding-right: 3px;
 }
 
 .task a[href*="scan-on-demand"] img, 
-.task a[href*="failure-cause-management"] img {
+.task a[href*="failure-cause-management"] img,
+img[src*="information.png"] {
 	content: url(img/lightbulb.png);
 }
 
@@ -212,6 +236,10 @@ img[src*="credentials.png"] {
 	content: url(img/folder_add.png);
 }
 
+.task a[href*="git"] img {
+	content: url(img/shared_folder.png);
+}
+
 a[href*="configOutput?type=xml"] img {
 	content: url(img/file_format_xml.png);
 	width: 24px !important;
@@ -220,6 +248,22 @@ a[href*="configOutput?type=xml"] img {
 
 img[src*="help.png"] {
 	content: url(img/help.png);
+}
+
+img[src*="directory.png"] {
+	content: url(img/active_rooms.png);
+}
+
+img[src*="next.png"] {
+	content: url(img/arrow-_right.png);
+}
+
+img[src*="mail-mark-read.png"] {
+	content: url(img/message_to_all.png);
+}
+
+img[src*="atom.gif"] {
+	content: url(img/rss.png);
 }
 
 /* Weather Icon Reaplacement */
@@ -241,8 +285,26 @@ img[src*="help.png"] {
 
 /* Job status icons */
 .icon-blue {
-	content: url(img/tick.png)
+	/*content: url(img/tick.png);*/
+	content: url(img/smiley_status/smiley.png);
 }
 .icon-red {
-	content: url(img/cross.png)
+	/*content: url(img/cross.png);*/
+	content: url(img/smiley_status/smiley_sad.png);
+}
+.icon-yellow {
+	content: url(img/smiley_status/smiley_confused.png);
+}
+.icon-grey, .icon-disabled, .icon-aborted, .icon-nobuilt {
+	content: url(img/smiley_status/smiley_waiting.png);
+}
+
+/* Animation replacements */
+.icon-grey-anime, .icon-blue-anime, .icon-yellow-anime, .icon-red-anime {
+	content: url(img/animated/preloader_transparent.gif);
+	margin-right: 10px;
+}
+
+#spinner img {
+	content: url(img/animated/Preloader_2.gif);
 }

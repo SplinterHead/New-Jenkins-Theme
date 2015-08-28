@@ -1,19 +1,31 @@
-#header, li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:hover, #right-top-nav .smallfont:hover {
+/* Colour Scheme declaraion. Darker tone */
+#header, li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:hover, #right-top-nav .smallfont:hover, div .tabBar .tab a {
 	background-color: #205081 !important;
 	color: white !important;
 }
 
-#breadcrumbBar, .first-of-type, .yuimenuitem, .top-sticker-inner, .pane-header, .build-pipeline, .progress-bar-done {
+/* Colour Scheme declaraion. Lighter tone */
+#breadcrumbBar, .first-of-type, .yuimenuitem, .top-sticker-inner, .pane-header, .build-pipeline, .progress-bar-done, #projectstatus th, .sortheader, .sortable th, div .tabBar .active a {
 	background-color: #4D739A !important;
 	color: white !important;
 }
 
-#search-box {
-	background-image: url(img/zoom.png);
-    background-size: 16px;
+/* Hidden borders */
+#side-panel .pane-frame:hover, .mouseover, #breadcrumbs, .bigtable tr, table.pane {
+	border: none !important;
 }
 
-a {
+/* Hidden Items */
+footer, #menuSelector, #build-pipeline-plugin-content #icon-bar, .revision-cell, #pipelines tr:last-of-type, div[id^="title-dashboard"] {
+	display: none !important;
+}
+
+#search-box, #filter-box {
+	background-image: url(img/zoom.png) !important;
+	background-size: 16px !important;
+}
+
+a, .dashboard a {
 	text-decoration: none;
 }
 
@@ -23,9 +35,9 @@ a:visited {
 
 #breadcrumbBar {
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
-    height: 27px !important;
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+	height: 27px !important;
 }
 
 .top-sticker-inner a, .pane-header, .pane-header a {
@@ -39,22 +51,15 @@ a:visited {
 }
 
 #side-panel {
-	min-height: 100vh;
-	min-width: 360px;
-	padding-left: 0 !important;
-	padding-right: 0 !important;
+	height: 100% !important;
+	min-height: 100vh !important;
+	min-width: 360px !important;
+	bottom: 0px !important;
+	padding: 0 !important;
 	background-color: #DDD;
 	-webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
-    -moz-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
-}
-
-#side-panel .pane-frame:hover {
-	border: 0px !important;
-}
-
-.mouseover, #breadcrumbs {
-	border: 0px !important;
+	-moz-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
+	box-shadow: 5px 0 10px rgba(0, 0, 0, 0.32);
 }
 
 #tasks, .model-link {
@@ -76,7 +81,6 @@ a:visited {
 
 .progress-bar {
 	border-color: #4D739A !important;
-
 }
 
 #main-panel {
@@ -88,17 +92,28 @@ a:visited {
 	font-weight:bold;
 }
 
-.dashboard a {
-	padding: 0;
+.tabBar .tab {
+	padding-bottom: 1px;
 }
+
+.tabBar .active {
+	padding-bottom: 1px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow:    none;
+	box-shadow:         none;
+}
+
+.bigtable td { border-bottom: 1px solid #4D739A !important; }
+.bigtable td:first-of-type { border-left: 1px solid #4D739A !important; }
+.bigtable td:last-of-type { border-right: 1px solid #4D739A !important; }
 
 .console-output, #spinner {
 	background-color: black;
 	color: white;
 	padding: 10px;
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
 }
 
 .console-output a {
@@ -109,20 +124,16 @@ a:visited {
 	padding: 0px !important;
 }
 
-#build-pipeline-plugin-content #icon-bar, .revision-cell {
-	display: none;
-}
-
 .warning { 
 	background-image: url(img/risk.png);
-    background-size: 24px;
-    padding-left: 30px;
+	background-size: 24px;
+	padding-left: 30px;
 }
 
 form p.info {
 	background-image: url(img/arrow-_right.png);
-    background-size: 20px;
-    padding-left: 30px;
+	background-size: 20px;
+	padding-left: 30px;
 
 }
 
@@ -141,16 +152,11 @@ table[id*="portlet"] {
 }
 
 table[id*="portlet"] td {
-	padding: 0px !important;
+	padding: 0px;
 }
 
-footer {
-	display: none;
-}
-
-/* Hidden Elements */
-#menuSelector {
-	display: none;
+.build-pipeline {
+	padding: 10px !important;
 }
 
 /* Replacement Icons*/
@@ -204,13 +210,89 @@ footer {
 
 .icon-document { content: url(img/document.png); }
 
+.icon-network { content: url(img/monitors.png); }
+
+.icon-system-log-out { content: url(img/standby.png); }
+
+/*.icon-previous { content: url(img/rewind.png); }
+
+.icon-next { content: url(img/fast_forward.png); }*/
+
 /* Some icons do not have direct references
    we need to access these by other means */
 #description-link img {
-	content: url(img/blog.png);
-	width: 28px !important;
-    height: 24px !important;
-    padding-right: 3px;
+	content: url(img/pencil.png);
+	width: 24px !important;
+	height: 24px !important;
+}
+
+a[href*="configOutput?type=xml"] img {
+	content: url(img/file_format_xml.png);
+	width: 24px !important;
+	height: 24px !important;
+}
+
+a#showDiff img {
+	content: url(img/technical_wrench.png);
+}
+
+img[src*="help.png"] {
+	content: url(img/help.png);
+}
+
+img[src*="next.png"] {
+	content: url(img/arrow-_right.png);
+	width: 24px;
+	height: 24px;
+}
+
+img[src*="directory.png"] {
+	content: url(img/active_rooms.png);
+}
+
+img[src*="mail-mark-read.png"] {
+	content: url(img/message_to_all.png);
+}
+
+img[src*="p4.png"] {
+	content: url(img/osi_model.png);
+}
+
+img[src*="atom.gif"] {
+	content: url(img/rss.png);
+}
+
+/* Icons of manual size changes */
+img[src*="32x32/terminal.png"] {
+	content: url(img/terminal.png);
+	width: 32px !important;
+	height: 32px !important;
+}
+img[src*="24x24/terminal.png"] {
+	content: url(img/terminal.png);
+	width: 24px !important;
+	height: 24px !important;
+}
+img[src*="16x16/terminal.png"] {
+	content: url(img/terminal.png);
+	width: 16px !important;
+	height: 16px !important;
+}
+
+img[src*="32x32/folder.gif"] {
+	content: url(img/folder.png);
+	width: 32px !important;
+	height: 32px !important;
+}
+img[src*="24x24/folder.gif"] {
+	content: url(img/folder.png);
+	width: 24px !important;
+	height: 24px !important;
+}
+img[src*="16x16/folder.gif"] {
+	content: url(img/folder.png);
+	width: 16px !important;
+	height: 16px !important;
 }
 
 .task a[href*="scan-on-demand"] img, 
@@ -219,13 +301,14 @@ img[src*="information.png"] {
 	content: url(img/lightbulb.png);
 }
 
-.task a[href*="scmPollLog"] img, .icon-orange-square {
-	content: url(img/shared_folder.png);
-}
-
 .task a[href*="credential-store"] img,
 img[src*="credentials.png"] {
 	content: url(img/key.png);
+}
+
+.task a[href*="scmPollLog"] img, .icon-orange-square,
+.task a[href*="git"] img  {
+	content: url(img/shared_folder.png);
 }
 
 .task a[href*="jobConfigHistory"] img {
@@ -236,34 +319,12 @@ img[src*="credentials.png"] {
 	content: url(img/folder_add.png);
 }
 
-.task a[href*="git"] img {
-	content: url(img/shared_folder.png);
+.task .task-icon-link img[src*="previous.png"] {
+	content: url(img/rewind.png);
 }
 
-a[href*="configOutput?type=xml"] img {
-	content: url(img/file_format_xml.png);
-	width: 24px !important;
-    height: 24px !important;
-}
-
-img[src*="help.png"] {
-	content: url(img/help.png);
-}
-
-img[src*="directory.png"] {
-	content: url(img/active_rooms.png);
-}
-
-img[src*="next.png"] {
-	content: url(img/arrow-_right.png);
-}
-
-img[src*="mail-mark-read.png"] {
-	content: url(img/message_to_all.png);
-}
-
-img[src*="atom.gif"] {
-	content: url(img/rss.png);
+.task .task-icon-link img[src*="next.png"] {
+	content: url(img/fast_forward.png);
 }
 
 /* Weather Icon Reaplacement */

@@ -1,11 +1,11 @@
 /* Colour Scheme declaraion. Darker tone */
-#header, li.item:hover, .breadcrumbBarAnchor:hover, .mouseIsOverMenuSelector, .children:hover, #right-top-nav .smallfont:hover, div .tabBar .tab a {
+#header, li.item:hover, .breadcrumbBarAnchor:hover, .yuimenuitemlabel:hover, .mouseIsOverMenuSelector, .children:hover, #right-top-nav .smallfont:hover, div .tabBar .tab a {
 	background-color: #205081 !important;
 	color: white !important;
 }
 
 /* Colour Scheme declaraion. Lighter tone */
-#breadcrumbBar, .first-of-type, .yuimenuitem, .top-sticker-inner, .pane-header, .build-pipeline, .progress-bar-done, #projectstatus th, .sortheader, .sortable th, div .tabBar .active a {
+#breadcrumbBar, .first-of-type, .yuimenuitem, .yuimenuitemlabel, .yuimenuitemlabel-disabled:hover, .top-sticker-inner, .pane-header, .build-pipeline, .progress-bar-done, #projectstatus th, .sortheader, .sortable th, div .tabBar .active a {
 	background-color: #4D739A !important;
 	color: white !important;
 }
@@ -84,7 +84,7 @@ a:visited {
 }
 
 #main-panel {
-	height: 100vh;
+	height: 100vh !important;
 }
 
 #description {
@@ -116,8 +116,13 @@ a:visited {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
 }
 
-.console-output a {
-	color: #DDD;
+.console-output a, .yuimenuitemlabel-disabled, .yuimenuitemlabel-disabled:hover {
+	color: #DDD !important;
+}
+
+#buildHistoryPage .row .pane-footer, #buildHistoryPage .row .pane .build-row {
+	border: 0;
+	background-color: #DDD;
 }
 
 #build-pipeline-plugin-content {
@@ -166,21 +171,23 @@ table[id*="portlet"] td {
 	padding-bottom: 4px;
 }
 
-.icon-clock { content: url(img/play.png); }
+.icon-clock, a[href*="scriptler"] img, img[src*="terminal.gif"] { content: url(img/play.png); }
 
 .icon-new-package { content: url(img/add.png); }
 
-.icon-terminal { content: url(img/terminal.png); }
+.icon-terminal, img[src*="notepad.gif"] { content: url(img/terminal.png); }
 
 .icon-document-properties { content: url(img/white_list.png); }
 
-.icon-user { content: url(img/group.png); }
+.icon-user, img[src*="user.png"] { content: url(img/group.png); }
  
 .icon-notepad { content: url(img/history.png); }
 
 .icon-gear { content: url(img/gear.png); }
 
-.icon-edit-delete { content: url(img/close.png); }
+.icon-graph { content: url(img/stock.png); }
+
+.icon-edit-delete, img[src*="edit-delete.gif"] { content: url(img/close.png); }
 
 .icon-search { content: url(img/zoom.png); }
 
@@ -232,12 +239,32 @@ a[href*="configOutput?type=xml"] img {
 	height: 24px !important;
 }
 
+a[href*="administrativeMonitor/OldData"] img {
+	content: url(img/block_list.png);
+}
+
+a[href*="dynamicparameter"] img {
+	content: url(img/menu.png);
+}
+
+a[href*="scriptApproval"] img {
+	content: url(img/instant_message.png);
+}
+
 a#showDiff img {
 	content: url(img/technical_wrench.png);
 }
 
 img[src*="help.png"] {
 	content: url(img/help.png);
+}
+
+img[src*="template-debugger.png"] {
+	content: url(img/envelope_open.png);
+}
+
+img[src*="document_edit.gif"] {
+	content: url(img/pencil.png);
 }
 
 img[src*="next.png"] {
@@ -262,6 +289,10 @@ img[src*="atom.gif"] {
 	content: url(img/rss.png);
 }
 
+img[src*="domain.png"] {
+	content: url(img/company.png);
+}
+
 /* Icons of manual size changes */
 img[src*="32x32/terminal.png"] {
 	content: url(img/terminal.png);
@@ -275,6 +306,21 @@ img[src*="24x24/terminal.png"] {
 }
 img[src*="16x16/terminal.png"] {
 	content: url(img/terminal.png);
+	width: 16px !important;
+	height: 16px !important;
+}
+img[src*="32x32/new-credential.png"] {
+	content: url(img/key.png);
+	width: 32px !important;
+	height: 32px !important;
+}
+img[src*="24x24/new-credential.png"] {
+	content: url(img/key.png);
+	width: 24px !important;
+	height: 24px !important;
+}
+img[src*="16x16/new-credential.png"] {
+	content: url(img/key.png);
 	width: 16px !important;
 	height: 16px !important;
 }
@@ -302,7 +348,8 @@ img[src*="information.png"] {
 }
 
 .task a[href*="credential-store"] img,
-img[src*="credentials.png"] {
+img[src*="credentials.png"],
+img[src*="credential.png"]{
 	content: url(img/key.png);
 }
 
@@ -346,11 +393,9 @@ img[src*="credentials.png"] {
 
 /* Job status icons */
 .icon-blue {
-	/*content: url(img/tick.png);*/
 	content: url(img/smiley_status/smiley.png);
 }
 .icon-red {
-	/*content: url(img/cross.png);*/
 	content: url(img/smiley_status/smiley_sad.png);
 }
 .icon-yellow {
@@ -359,11 +404,61 @@ img[src*="credentials.png"] {
 .icon-grey, .icon-disabled, .icon-aborted, .icon-nobuilt {
 	content: url(img/smiley_status/smiley_waiting.png);
 }
+/* Job status icons hover */
+.icon-blue:hover {
+	content: url(img/smiley_status/smiley_coloured.png);
+}
+.icon-red:hover {
+	content: url(img/smiley_status/smiley_sad_coloured.png);
+}
+.icon-yellow:hover {
+	content: url(img/smiley_status/smiley_confused_coloured.png);
+}
+.icon-grey:hover, .icon-disabled:hover, .icon-aborted:hover, .icon-nobuilt:hover {
+	content: url(img/smiley_status/smiley_waiting_coloured.png);
+}
 
 /* Animation replacements */
 .icon-grey-anime, .icon-blue-anime, .icon-yellow-anime, .icon-red-anime {
 	content: url(img/animated/preloader_transparent.gif);
 	margin-right: 10px;
+}
+
+.icon-clock-anime {
+	content: url(img/play.png);
+
+    -webkit-animation-name: icon-clock-anime;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+    -moz-animation-name: icon-clock-anime;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    
+    animation-name: icon-clock-anime;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes icon-clock-anime {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes icon-clock-anime {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes icon-clock-anime {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
 
 #spinner img {
